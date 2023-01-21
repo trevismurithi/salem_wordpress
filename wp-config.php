@@ -20,17 +20,22 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
-    $db = parse_url($_ENV[`CLEARDB_DATABASE_URL`]);
-    define(‘DB_NAME’, trim($db[`path`],`/`));
-    define(‘DB_USER’, $db[`user`]);
-    define(‘DB_PASSWORD’, $db[`pass`]);
-    define(‘DB_HOST’, $db[`host`]);
-    define(‘DB_CHARSET’, ‘utf8’);
-    define(‘DB_COLLATE’, ‘’);
-} else {
-    die(‘No Database credentials!’);
-}
+define( 'DB_NAME', 'heroku_b9cce178c7b95b0' );
+
+/** Database username */
+define( 'DB_USER', 'b8840eb0b01d75' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'a7248eea' );
+
+/** Database hostname */
+define( 'DB_HOST', 'us-cdbr-east-06.cleardb.net' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
 
 /**#@+
  * Authentication unique keys and salts.
